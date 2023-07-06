@@ -1,0 +1,28 @@
+<div>
+    <div class="mt-4">
+        <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search courses..." aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+
+        <div class="row ">
+            {{#each courses}}
+            <div class="col-sm-6 col-lg-4 mt-4">
+                <div class="card card-courses-item">
+                    <a href="/courses/{{this.slug}}">
+                        <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+                    </a>
+                    <div class="card-body">
+                        <a href="/courses/{{this.slug}}">
+                            <h5 class="card-title">{{this.name}}</h5>
+                        </a>
+                        <p class="card-text" style="height: 150px; overflow: hidden; ">{{this.description}}</p>
+                        <a href="#" class="btn btn-primary">Buy courses</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+
+    </div>
+</div>
