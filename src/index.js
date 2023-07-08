@@ -1,4 +1,4 @@
-require("dotenv").config();
+require('dotenv').config();
 const express = require('express');
 const hbs = require('express-handlebars');
 const path = require('path');
@@ -42,22 +42,21 @@ app.engine(
         const icons = {
           default: 'chevron-expand-outline',
           asc: 'chevron-down-outline',
-          desc: 'chevron-up-outline'
-        }
+          desc: 'chevron-up-outline',
+        };
         const types = {
           default: 'asc',
           desc: 'asc',
           asc: 'desc',
-        }
+        };
 
         const type = types[sortType];
         const icon = icons[sortType];
         return `<a href="?_sort&column=${field}&type=${type}"><ion-icon name="${icon}"></ion-icon></a>`;
       },
       loginBtn: (username) => {
-        console.log(username)
         if (username) {
-          global.username  = username;
+          global.username = username;
           return `<div class="dropdown">
 
           <a class="btn btn-secondary dropdown-toggle " href="/auth/logout" type="button" id="dropdownMenuButton"
@@ -69,15 +68,18 @@ app.engine(
           <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
             <a class="dropdown-item" href="/auth/logout">Logout</a>
           </div>
-        </div>`
-        }
-        else {
+        </div>`;
+        } else {
           return `<a class="btn btn-secondary " href="/auth/login" type="button" >
-          Login
+          Log in
         </a>
-          `
+        <a class="btn btn-secondary " href="/auth/register" type="button" >
+          Sing up
+        </a>
+          `;
         }
-      }
+      },
+     
     },
   }),
 );

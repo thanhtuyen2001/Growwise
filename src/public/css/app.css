@@ -1,29 +1,16 @@
 .choose-select-action {
   width: 180px;
-  margin: 0 10px;
-}
+  margin: 0 10px; }
 
-/* .register-form{
-    margin-top: 10px;
-    padding: 0px
-  }
-  .register-form .card {
-    background-color: antiquewhite ;
-  } */
-/* Coded with love by Mutiullah Samim */
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-}
+.register-form {
+  margin-top: 20px; }
 
 .user_card {
   height: auto;
   width: 450px;
   margin-top: auto;
   margin-bottom: auto;
-  background: #CCEABB;
+  background: #cceabb;
   position: relative;
   display: flex;
   justify-content: center;
@@ -32,64 +19,59 @@ html {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  border-radius: 5px;
+  border-radius: 5px; }
+  .user_card .brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: #cceabb;
+    padding: 10px;
+    text-align: center; }
+    .user_card .brand_logo_container .brand_logo {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      border: 2px solid white; }
+  .user_card .form_container {
+    margin-top: 100px; }
+    .user_card .form_container .input-group-text {
+      background: #285430 !important;
+      color: white !important;
+      border: 0 !important;
+      border-radius: 0.25rem 0 0 0.25rem !important; }
+    .user_card .form_container .input_user:focus,
+    .user_card .form_container .input_pass:focus {
+      box-shadow: none !important;
+      outline: 0px !important; }
+    .user_card .form_container .login_container {
+      padding: 0 2rem; }
+      .user_card .form_container .login_container .login_btn {
+        width: 100%;
+        background: #285430 !important;
+        color: white !important; }
+        .user_card .form_container .login_container .login_btn::focus {
+          box-shadow: none !important;
+          outline: 0px !important; }
+    .user_card .form_container .custom-checkbox .custom-control-input ~ .custom-control-label::before {
+      background-color: white !important; }
+    .user_card .form_container .custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+      background-color: #285430 !important; }
+  .user_card a {
+    color: #367e18; }
 
-}
-.user_card a{
-  color: #367E18;
-}
-.brand_logo_container {
-  position: absolute;
-  height: 170px;
-  width: 170px;
-  top: -75px;
-  border-radius: 50%;
-  background: #CCEABB;
-  padding: 10px;
-  text-align: center;
-}
-
-.brand_logo {
-  height: 150px;
-  width: 150px;
-  border-radius: 50%;
-  border: 2px solid white;
-}
-
-.form_container {
-  margin-top: 100px;
-}
-
-.login_btn {
-  width: 100%;
-  background: #285430 !important;
-  color: white !important;
-}
-
-.login_btn:focus {
-  box-shadow: none !important;
-  outline: 0px !important;
-}
-
-.login_container {
-  padding: 0 2rem;
-}
-
-.input-group-text {
-  background: #285430 !important;
-  color: white !important;
-  border: 0 !important;
-  border-radius: 0.25rem 0 0 0.25rem !important;
-}
-
-.input_user,
-.input_pass:focus {
-  box-shadow: none !important;
-  outline: 0px !important;
-}
-.custom-checkbox .custom-control-input~.custom-control-label::before{
-  background-color: white !important;
-}
-.custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-  background-color: #285430 !important;
-}
+.introduce_card {
+  background-color: #cceabb; 
+  width: 18rem;
+  margin: 15px 5px}
+  .introduce_card .icon_container {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 10px auto; }

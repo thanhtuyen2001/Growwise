@@ -1,11 +1,119 @@
 @import 'variables';
 
-
 .choose-select-action {
   width: 180px;
   margin: 0 10px;
 }
 
-.register-form{
+.register-form {
   margin-top: 20px;
+}
+
+.user_card {
+  height: auto;
+  width: 450px;
+  margin-top: auto;
+  margin-bottom: auto;
+  background: $backgroundGreen;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -moz-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 5px;
+
+  .brand_logo_container {
+    position: absolute;
+    height: 170px;
+    width: 170px;
+    top: -75px;
+    border-radius: 50%;
+    background: $backgroundGreen;
+    padding: 10px;
+    text-align: center;
+
+    .brand_logo {
+      height: 150px;
+      width: 150px;
+      border-radius: 50%;
+      border: 2px solid white;
+    }
+  }
+
+  .form_container {
+    margin-top: 100px;
+
+    .input-group-text {
+      background: $darkgreen !important;
+      color: white !important;
+      border: 0 !important;
+      border-radius: 0.25rem 0 0 0.25rem !important;
+    }
+
+    .input_user,
+    .input_pass {
+      &:focus {
+        box-shadow: none !important;
+        outline: 0px !important;
+      }
+    }
+
+    .login_container {
+      padding: 0 2rem;
+
+      .login_btn {
+        width: 100%;
+        background: $darkgreen !important;
+        color: white !important;
+
+        &::focus {
+          box-shadow: none !important;
+          outline: 0px !important;
+        }
+      }
+    }
+
+    .custom-checkbox {
+      .custom-control-input {
+        ~ .custom-control-label {
+          &::before {
+            background-color: white !important;
+          }
+        }
+
+        &:checked {
+          ~ .custom-control-label {
+            &::before {
+              background-color: $darkgreen !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  a {
+    color: #367e18;
+  }
+}
+
+.introduce_card {
+  background-color: $backgroundGreen;
+  width: 18rem;
+  .icon_container {
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    border-radius: 50%;
+    margin: 10px auto;
+  }
 }

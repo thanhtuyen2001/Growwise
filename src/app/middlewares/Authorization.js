@@ -1,12 +1,16 @@
+module.exports = function requireRole(req, res, next) {
+  let user = {};
 
-module.exports = function requireRole(role) {
-    return (req, res, next) => {
-      const { user } = req;
-  
-      if (user && user.role === role) {
-        next(); // User has the required role, proceed to the next middleware or route handler
-      } else {
-        res.status(403).json({ message: 'Access denied' }); // User does not have the required role
-      }
-    };
+  if (req.cookies.user) {
+    const { username, role } = JSON.parse(req.cookies.user);
+    user.role = role;
+    user.name = username;
   }
+
+  if (user.role === 'admin') {
+    res.locals.username = user.name;
+    next();
+  } else {
+    return res.redirect('/');
+  }
+};
